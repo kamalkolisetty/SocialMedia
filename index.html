@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamal Kumar Kolisetty - Social Media Portfolio</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            line-height: 1.6;
+        }
+        h1 {
+            font-weight: 700;
+            font-size: 3rem;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        h3 {
+            font-weight: 500;
+            font-size: 1.5rem;
+            margin-top: 35px;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: #1a1a1a;
+            padding: 15px 0;
+        }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            transition: color 0.4s ease;
+        }
+        .nav-link:hover {
+            color: #ff007a;
+        }
+        .nav-link span {
+            margin-left: 5px;
+            color: #ffd700;
+            transition: transform 0.4s ease;
+        }
+        .nav-link:hover span {
+            transform: translateX(5px);
+        }
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            padding: 70px 0;
+        }
+        .section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s ease forwards;
+        }
+        #x { animation-delay: 0.2s; }
+        #instagram { animation-delay: 0.4s; }
+        #youtube { animation-delay: 0.6s; }
+        #bms { animation-delay: 0.8s; }
+        #value { animation-delay: 1.0s; }
+        #contact { animation-delay: 1.2s; }
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .image-container {
+            margin-bottom: 29px;
+        }
+        .image-container img {
+            max-width: 40%;
+            border-radius: 10px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+        .btn-primary {
+            background-color: #00ffff;
+            border: none;
+            padding: 10px 20px;
+            color: #0f0c29;
+            transition: background-color 0.4s ease;
+        }
+        .btn-primary:hover {
+            background-color: #00cccc;
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        ul li span {
+            color: #00ffff;
+            font-weight: 600;
+        }
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        a {
+            color: #e0ff00; /* Neon Lime */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #ff007a;
+        }
+        /* Typewriter cursor */
+        #typewriter::after {
+            content: '|';
+            animation: blink 0.7s infinite;
+            margin-left: 2px;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        @media (max-width: 768px) {
+            .image-container img { max-width: 60%; }
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 1.8rem; }
+            h3 { font-size: 1.4rem; }
+        }
+        @media (max-width: 576px) {
+            .section { padding: 30px 0; }
+            .image-container img { max-width: 80%; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Kamal’s Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#x">X <span>➜</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#instagram">Instagram <span>➜</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#youtube">YouTube <span>➜</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bms">BookMyShow <span>➜</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact <span>➜</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="text-center">
+        <div class="container">
+            <h1>Kamal Kumar Kolisetty’s Social Media Portfolio</h1>
+            <p>Leveraging <span style="color: #ffd700;">AI</span> to dominate engagement, ride trends, and craft unbeatable content strategies. 📱✨</p>
+            <a href="#x" class="btn btn-primary mt-3">Explore My Work</a>
+        </div>
+    </header>
+
+    <!-- X Section -->
+    <section id="x" class="section">
+        <div class="container text-start">
+            <h2>X Engagement Strategies</h2>
+            <p>In today’s digital jungle, X engagement is <span style="color: #ffd700;">everything</span>. With attention spans shrinking and competition soaring, getting noticed on X is a high-stakes game. I use <span style="color: #ffd700;">AI-powered</span> tools to track trends, decode sentiment, and drop content that hits like a thunderbolt—retweets, quotes, and chaos guaranteed. 🚀</p>
+            <p><strong>Political Posts:</strong> From elections to hot debates, I craft razor-sharp posts that slice through the clutter. AI fuels real-time counters to opposition narratives, turning hashtags into battlegrounds and threads into viral victories.</p>
+            <div class="image-container"><img src="assets/dmk.png" alt="Political Strategy"></div>
+            <p><strong>Movie Hype & Flow:</strong> Movies live or die by hype, and I’m the maestro. It kicks off with a loud “Now Watching” to spark the fire, surges with “First Half Done” to crank the tension, and explodes with a “Final Review” that fans can’t resist sharing. It’s a seamless, electrifying flow—teaser to climax—that keeps followers buzzing and the algorithm begging for more. Pure X storytelling magic. 🎬</p>
+            <div class="image-container"><img src="assets/dilruba.png" alt="Movie Hype & Flow"></div>
+            <p><strong>Product Promotion:</strong> When it’s time to unveil the next big thing—like we did recently with #GalaxyA56 and #GalaxyA36—I hit X with jaw-dropping visuals that stop the scroll. AI crafts posts that tease killer features, ignite hashtags, and pull fans into the hype storm. It’s all about that first impression—make it loud, make it stick. 🔥</p>
+            <div class="image-container"><img src="assets/product.png" alt="Product Promo"></div>
+            <ul>
+                <li><span>Launch Vibes:</span> Stunning X posts that scream “new and now.”</li>
+                <li><span>Hashtag Play:</span> Riding trending tags to the top.</li>
+                <li><span>Fan Frenzy:</span> Teasers that spark replies and shares galore.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="section">
+        <div class="container text-start">
+            <h2>Instagram Content Strategy</h2>
+            <p>Instagram’s a visual warzone—only the bold survive. I build posts and stories that don’t just scroll past—they demand attention. With <span style="color: #ffd700;">AI-driven</span> precision, every caption, hashtag, and image is a weapon for max engagement. 📸</p>
+            <p>My flow—Now Watching, First Half Done, Final Review—turns movies into Insta epics. Stories tease, reels ignite, and posts lock in the hype. It’s strategic, gorgeous, and built to dominate feeds. ✨</p>
+            <div class="image-container"><img src="assets/insta.jpg" alt="Instagram Strategy"></div>
+            <ul>
+                <li><span>Visual Fire:</span> Aesthetics that scream identity.</li>
+                <li><span>Engagement Bait:</span> Polls and CTAs that hook users.</li>
+                <li><span>Trend Sync:</span> Leveraging Insta’s latest tricks.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- YouTube Comments Section -->
+    <section id="youtube" class="section">
+        <div class="container text-start">
+            <h2>YouTube Comment Engagement</h2>
+            <p>YouTube’s a goldmine beyond views—it’s about igniting fandoms. I wield <span style="color: #ffd700;">AI-driven</span> comments to transform watchers into warriors—spotlighting crew gems and pushing one killer aspect to frenzy levels: lyrics that haunt, BGM that thumps, or a heroine’s jaw-dropping charm.</p>
+            <p>Every comment’s a matchstick: praising the lyricist to spark singalongs, hyping the BGM to loop in heads, or gushing over the heroine to flood edits. It’s precision chaos—crafted to spike interaction, climb the algorithm, and forge a tribe. I scan top comments, predict vibes, and hit when it’s prime time. 🎵</p>
+            <ul>
+                <li><span>Crew Love:</span> Elevating unsung stars to fan idols.</li>
+                <li><span>Hype Trigger:</span> One element to unleash passion.</li>
+                <li><span>Perfect Timing:</span> Striking at peak engagement.</li>
+                <li><span>Tribe Vibes:</span> Replies that fuel the fire.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- BookMyShow Section -->
+    <section id="bms" class="section">
+        <div class="container text-start">
+            <h2>BookMyShow Review Engagement</h2>
+            <p>BookMyShow turns hype into seats, and I’m the spark. Starting with <span style="color: #ffd700;">“I’m interested”</span> to reel them in, I drop reviews that don’t just rate—they roar. AI times every post for peak impact, hitting the sweet spot.</p>
+            <p>It’s a buzz machine: raving about epic climaxes or star power drives debates, fills theaters, and keeps the energy electric. From pre-release teases to post-show mania, I make sure it’s a sellout story. 🎟️</p>
+            <div class="image-container"><img src="assets/bms.png" alt="BMS Engagement"></div>
+            <ul>
+                <li><span>Buzz Bombs:</span> Early posts that tease big.</li>
+                <li><span>Review Heat:</span> Details that demand action.</li>
+                <li><span>Trend Play:</span> Staying hot and relevant.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- What I Bring Section -->
+    <section id="value" class="section">
+        <div class="container text-start">
+            <h2>What I Bring to Your Business</h2>
+            <p>I’m Kamal Kumar Kolisetty, your <span style="color: #ffd700;">AI-powered</span> social media alchemist. I don’t just post—I craft strategies that dominate X, Instagram, YouTube, and beyond. From viral political threads to movie hype that fills seats, I turn trends into triumphs and engagement into revenue. Know a different person? Nope, just me—the cosmic spark blending AI smarts with social media soul.</p>
+            <ul>
+                <li><span>Engagement Overdrive:</span> Skyrocketing likes, shares, and retweets with precision AI tools.</li>
+                <li><span>Trend Mastery:</span> Riding waves like #GalaxyA56 to keep your brand buzzing.</li>
+                <li><span>Content Fire:</span> Visuals, captions, and reviews that stop scrolls and spark action.</li>
+                <li><span>Business Wins:</span> Turning hype into seats, clicks into customers, and fans into tribes.</li>
+            </ul>
+            <p>Curious about the tech behind the magic? Check my <a href="https://kamalkolisettydev-portfolio.netlify.app/" target="_blank">technical portfolio</a>! <span id="typewriter"></span></p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
+            <p>Got a project that needs some <span style="color: #ffd700;">AI magic</span>? Drop me a line, darling!</p>
+            <ul>
+                <li><span>Phone:</span> +91-7780130103</li>
+                <li><span>Email:</span> <a href="mailto:kamalkumarkolisetty@gmail.com">kamalkumarkolisetty@gmail.com</a></li>
+                <li><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/kamal-kumar-kolisetty-19b944221/" target="_blank">Kamal Kumar Kolisetty</a></li>
+                <li><span>Technical Portfolio:</span> <a href="https://kamalkolisettydev-portfolio.netlify.app/" target="_blank">Explore My AI & Tech Work</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Created by Kamal Kumar Kolisetty | <span style="color: #ffd700;">Mastering Social Media with AI</span> | © 2025</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar auto-close on mobile and scroll fix
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navbarCollapse = document.querySelector('#navbarNav');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Auto-close on mobile
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        const collapse = new bootstrap.Collapse(navbarCollapse, {
+                            toggle: false
+                        });
+                        collapse.hide();
+                    }
+
+                    // Scroll to top of section
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        // Typewriter effect on scroll into view
+        const typewriterText = "Ready to dominate the digital jungle? Let’s skyrocket your brand together!";
+        const typewriterElement = document.getElementById('typewriter');
+        let i = 0;
+        let hasTyped = false;
+
+        function typeWriter() {
+            if (i < typewriterText.length) {
+                typewriterElement.textContent += typewriterText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50); // 50ms per character
+            }
+        }
+
+        // Intersection Observer for #value
+        const valueSection = document.getElementById('value');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !hasTyped) {
+                    hasTyped = true;
+                    typeWriter();
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% of section is visible
+
+        observer.observe(valueSection);
+    </script>
+</body>
+</html>
